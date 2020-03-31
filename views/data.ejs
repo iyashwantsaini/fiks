@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+        
+
+   <div class="ui main text container">
+        <div class="ui huge header">Repair Data</div>
+        <br><br>
+        <div class="ui top  attached segment">
+            <div class="ui divided items">
+                <hr>
+                    <% allRepairData.forEach(function(repair){ %>
+                    <div class="item">
+                        <div class="content">
+                             <a class="header"><%= repair.first %> <%= repair.last %></a>
+                             <div class="meta">
+                                 <span><%= repair.phone %></span>
+                             </div>
+                             <div class="description">
+                                    <h4><%= repair.repairs %></h4>
+                                    <h4><%= repair.model %></h4>
+                                    <h4><%= repair.brand %></h4>
+                             </div>
+                             <hr>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+
+<% include ./partials/footer %>

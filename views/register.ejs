@@ -1,23 +1,59 @@
-<% include ./partials/header %>
-    <div class="row">
-        <h1 style="text-align: center">Sign Up</h1>
-        <div style="width: 30%; margin: 25px auto;">
-            <form action="/register" method="post">
-                <div class="form-group">
-                    <input class="form-control" type="number" name="phone" placeholder="phone number">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="username" placeholder="username">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="password" name="password" placeholder="password">
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
-                </div>
-            </form>
-            <a href="/">Home</a>
-        </div>
-    </div>
-<% include ./partials/footer %>
+<% include partials/header %>
+
+<div class="container">
+  <br><br><br>
+  <div class="row">
+          <!-- <h1 style="text-align: center">Sign Up</h1> -->
+          <div style="width: 30%; margin: 25px auto;">
+              <form action="/register" method="post">
+                  
+                  <div class="form-group">
+                      <input class="form-control" type="text" name="first" placeholder="First Name"required="">
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control" type="text" name="last" placeholder="Last Name"required="">
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control" type="text" name="phone" placeholder="Mobile"required="">
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control" type="text" name="username" placeholder="Username"required="">
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control" type="password" name="password" placeholder="Password"required="">
+                  </div>
+                  <div class="form-group">
+                      <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
+                  </div>
+              </form>
+              <!-- <a href="/login">SignIn</a> -->
+          </div>
+      </div>
+</div>
+
+<br><br><br><br>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script>
+            function allnumeric(inputtxt) {
+              var numbers = /^[0-9]+$/;
+              if (inputtxt.value.match(numbers)) {
+
+                document.form1.phone.focus();
+                return true;
+              } else {
+                
+                document.form1.phone.focus();
+                return false;
+              }
+            }
+          </script>
+<script>
+        var alert=$('.alert')
+        setTimeout(()=>{
+          alert.css('display','none')
+        },3000);
+      </script>
+
+<% include partials/footer %>
 
